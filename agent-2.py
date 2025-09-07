@@ -8,14 +8,14 @@ from ollama._types import ChatResponse
 import ollama
 from tools import read_file, list_files, edit_file, run_command, todo_write_tool, grep_tool, glob_tool, read_many_files, write_file
 from system_prompt import system_prompt, system_prompt_claude, system_prompt_3
-
+from system_prompt2 import system_prompt_claude2, sanitize_conversation
 available_tools = {'read_file': read_file, 'list_files': list_files, 'edit_file': edit_file, 'run_command': run_command, 'todo_write_tool': todo_write_tool, 'grep_tool': grep_tool, 'glob_tool': glob_tool, 'read_many_files': read_many_files, 'write_file': write_file}
 # first_input = input('User: ')
 # initial_message = first_input if first_input else 'show me all the files in the current directory'
 messages = [{
           "role": "system",
           # "content": system_prompt_3 + "/no_think"
-          "content": system_prompt_claude + "/no_think"
+          "content": system_prompt_claude2 + "/no_think"
         },
         # {
         #   'role': 'user', 'content': initial_message }
@@ -37,8 +37,9 @@ while True:
   messages.append({'role': 'user', 'content': user_input})
   if user_input == 'exit' or user_input == 'quit' or user_input == 'q':
     #store the messages to a file
-    with open('messages.txt', 'w') as f:
-      f.write(str(messages))
+    with open('messages.json', 'w', encoding='utf-8') as f:
+      sanitized_messages = sanitize_conversation(messages)
+      json.dump(sanitized_messages, f, indent=2, ensure_ascii=False)
     break
   while True:
     # Use streaming for real-time response
@@ -113,7 +114,7 @@ while True:
             continue
 
           tool_call_result = ('Result from tool call name: ' + tool_call.function.name + 'with arguments: ' + str(tool_call.function.arguments) + 'result: ' + str(result) + '\n')
-          # print(tool_call_result)
+          print(str(result))
           messages.append({'role': 'tool', 'content': tool_call_result, 'tool_name': tool_call.function.name})
         else:
           print(f'Tool {tool_call.function.name} not found')

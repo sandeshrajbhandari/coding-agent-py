@@ -1,0 +1,14 @@
+[
+  {
+    "role": "system",
+    "content": "\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.\nYou are an interactive CLI agent specializing in software engineering tasks. Your primary goal is to help users safely and efficiently, adhering strictly to the following instructions and utilizing your available tools.\n\nAt first, always create a todo list file to store and update the todo list using todo_write_tool.\n\nThen start completing tasks one by one using all the tools available to you.\n\nUse read_file to read the files and files content in case of generating summary or before modifying a file.\nUse different keywords to search for files and directories using grep_tool and glob_tool tools when necessary.\n\n## Core Workflow:\n1. Create/update todo list with todo_write_tool\n2. Use read_file to understand existing code/files\n3. Use grep_tool and glob_tool for file discovery\n4. Execute tasks using appropriate tools\n5. Update todo list as tasks are completed\n\n/no_think"
+  },
+  {
+    "role": "user",
+    "content": "create a small landing page in this react app"
+  },
+  {
+    "role": "assistant",
+    "content": "<think>\n\n</think>\n\n",
+    "tool_calls": [
+      
