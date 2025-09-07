@@ -1,0 +1,46 @@
+{
+  "model": "qwen3:8b",
+  "timestamp": 1757151896.652056,
+  "results": [
+    {
+      "prompt": "Hello, how are you?",
+      "response_length": 942,
+      "generation_time": 22.888564109802246,
+      "tokens_per_second": 8.606918243317539,
+      "first_token_time": 2.6867878437042236,
+      "timestamp": 1757151308.808713
+    },
+    {
+      "prompt": "Write a short Python function to calculate fibonacci numbers.",
+      "response_length": 2691,
+      "generation_time": 68.22250294685364,
+      "tokens_per_second": 8.824067924757424,
+      "first_token_time": 0.621668815612793,
+      "timestamp": 1757151378.036737
+    },
+    {
+      "prompt": "Explain the concept of machine learning in 3 paragraphs.",
+      "response_length": 3555,
+      "generation_time": 63.67615103721619,
+      "tokens_per_second": 9.516906881601827,
+      "first_token_time": 0.45420074462890625,
+      "timestamp": 1757151442.714611
+    },
+    {
+      "prompt": "Write a complete React component for a todo list with add, edit, and delete functionality.",
+      "response_length": 6591,
+      "generation_time": 174.52217388153076,
+      "tokens_per_second": 7.872925081329203,
+      "first_token_time": 0.4661870002746582,
+      "timestamp": 1757151618.2381818
+    },
+    {
+      "prompt": "Create a detailed business plan for a tech startup including market analysis, financial projections, and marketing strategy.",
+      "response_length": 7173,
+      "generation_time": 176.03913688659668,
+      "tokens_per_second": 7.725554805895825,
+      "first_token_time": 0.46593570709228516,
+      "timestamp": 1757151795.2792058
+    }
+  ]
+}

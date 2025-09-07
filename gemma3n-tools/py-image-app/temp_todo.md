@@ -1,0 +1,5 @@
+- Create main.py with pattern generation logic
+- Create README.md with documentation
+- Verify script runs correctly
+- Add optional unit tests (future)
+- Ensure no external dependencies

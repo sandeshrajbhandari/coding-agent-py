@@ -1,0 +1,1 @@
+- Run Django server in background and ping test

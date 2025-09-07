@@ -1,0 +1,10 @@
+- Create a new Django project
+- Set up the project structure
+- Create a new app for CRUD operations
+- Define models for the app
+- Create database migrations
+- Apply migrations to the database
+- Create views for CRUD operations
+- Set up URLs for the app
+- Create templates for the views
+- Test the CRUD functionality

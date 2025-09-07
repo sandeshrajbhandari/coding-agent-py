@@ -1,0 +1,5 @@
+- Create a Python script for random number generation
+- Define the range for the random numbers
+- Implement the random number generation logic
+- Add a function to generate random numbers
+- Add a main block to test the function

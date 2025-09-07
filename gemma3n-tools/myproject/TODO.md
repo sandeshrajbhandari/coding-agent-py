@@ -1,0 +1,4 @@
+- Review and understand the current code in settings.py
+- Identify any issues or areas for improvement
+- Make necessary code fixes and improvements
+- Ensure the code adheres to best practices and project standards

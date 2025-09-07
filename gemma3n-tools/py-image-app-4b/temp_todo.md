@@ -1,0 +1,7 @@
+- Create project structure for CLI pattern generator
+- Implement argparse for user inputs (pattern type, number of patterns)
+- Develop pattern generation logic (e.g., text sequences, ASCII art)
+- Add input validation and error handling
+- Write README.md with usage examples
+- Create requirements.txt
+- Test the application with sample inputs
