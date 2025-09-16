@@ -1,4 +1,5 @@
 # Coding Assistant Project
+see DEVLOG.md for actual details. this readme.md is boilerplate don't follow this.
 
 ## Project Overview
 This project implements an AI-powered coding assistant that helps with code generation, debugging, and documentation. The system integrates with various tools and frameworks to provide intelligent coding support.

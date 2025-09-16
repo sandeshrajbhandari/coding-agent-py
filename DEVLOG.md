@@ -26,6 +26,7 @@
 - see agent2.py for actual implementation
 - uses Client with configurable hosts, i was also using colab with local tunnel to expose an endpoint to run bigger models like gpt-oss:20b.
     - gpt-oss:20b is much better than qwen3:8b.
+    - colab notebook link - https://colab.research.google.com/drive/1WIXa_VaujgNET_AJPl8PqhRyrf8vDCZL?usp=sharing
 - at first I was using only one while True loop to get user input and call the api if there were tool_calls in the assitant response.
     - if there were no tool_call, the agent turn is finished
 - Later I just added a another loop outside with user input to turn it into multi-turn conversation.
@@ -81,7 +82,7 @@
             </example>
 
     - i later used <tool_call> tags in system_prompt_claude, like in qwen code examples, but this was wrong. as a result when I did this tool calls weren't being parsed by ollama correctly. and the tool calls weren't happening
-    - qwen-code and qwen agent lib has their own tool parser so the <tool_call> with <function=glob>..... style XML tags worked. but by adding them to my system prompt, it was interfering with the expected ollama tool format: 
+    - qwen-code and qwen agent lib has their own tool parser so the <tool_call> with <function=glob>..... style XML tags worked. but by adding them to my system prompt, it was interfering with the expected ollama tool format(https://ollama.com/library/qwen3:8b/blobs/ae370d884f10): 
         -   <tool_call>
             {"name": <function-name>, "arguments": <args-json-object>}
             </tool_call>
@@ -98,4 +99,11 @@
 - 
 
 
+## Resources
+- https://github.com/ollama/ollama-python
+- https://github.com/awslabs/mcp/blob/main/VIBE_CODING_TIPS_TRICKS.md?utm_source=hackernewsletter&utm_medium=email&utm_term=code
+- https://github.com/ollama/ollama/blob/main/docs/api.md#generate-request-with-options
 
+- https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/core/prompts.ts
+- https://github.com/QwenLM/qwen-code/tree/main/packages/core/src/tools
+- https://github.com/charmbracelet/crush/blob/main/internal/llm/prompt/v2.md
